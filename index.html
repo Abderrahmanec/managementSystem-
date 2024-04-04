@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="crud">
+      <div class="head">
+        <h2 style="color: red; font-family: 'Segoe UI'; ">Management System</h2>
+
+        <p style="color: blue; font-size: 1.2rem;">Product management system Java Script</p>
+      </div>
+      <div class="inputs">
+        <input type="text" value="" id="title" placeholder="title" />
+        <div class="price">
+          <input
+            type="number"
+            value=""
+            id="price"
+            placeholder="price"
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            value=""
+            id="taxes"
+            placeholder="taxes"
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            value=""
+            id="ads"
+            placeholder="ads"
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            value=""
+            id="discount"
+            placeholder="discount"
+            onkeyup="getTotal()"
+          />
+          <small id="total">32332</small>
+        </div>
+        <input type="number" value="" id="count" placeholder="count" />
+        <input type="text" value="" id="category" placeholder="Category" />
+        <button type="button" id="submit">Create</button>
+      </div>
+      <div class="outputs">
+        <div class="searchblock">
+          <input type="text" name="" id="search" onkeyup="searchData(this.value)" placeholder="search" />
+          <div class="btnSearch">
+            <button id="searchTitle" onclick="getsearchMode(this.id)">Search By Title</button>
+            <button id="searchCategory" onclick="getsearchMode(this.id)">Search By Category</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="deleteAll"></div>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>Total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        <tbody id="tbody">
+          <tr>
+            <td>1</td>
+            <td>title</td>
+            <td>price</td>
+            <td>taxes</td>
+            <td>ads</td>
+            <td>discount</td>
+            <td>Total</td>
+            <td>category</td>
+            <td><button id="update">update</button></td>
+            <td><button id="delete">delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <hr />
+    <script src="main.js" defer></script>
+  </body>
+</html>
